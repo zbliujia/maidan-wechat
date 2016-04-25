@@ -3,10 +3,16 @@ require('styles/App.css');
 
 import React from 'react';
 import Keyboard from './Keyboard';
+import Info from './Info';
 
 class App extends React.Component {
   render() {
-    return <Keyboard/>;
+    return (
+      <div>
+        <Info />
+        <Keyboard />
+      </div>
+    );
   }
 }
 

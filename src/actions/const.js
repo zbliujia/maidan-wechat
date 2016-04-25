@@ -1,1 +1,2 @@
-/* Populated by react-webpack-redux:action */
+
+export const CLICK_KEYBOARD = 'Click_Keyboard';

@@ -1,31 +1,21 @@
 import React, {
-  Component,
-  PropTypes
+  Component
 } from 'react';
-import { bindActionCreators } from 'redux';
+
 import { connect } from 'react-redux';
-import Main from '../components/Main';
+import KeyboardButton from '../components/KeyboardButtonComponent';
+import { clickKeyboard } from '../actions';
 
 class Keyboard extends Component {
   render() {
-    const {actions} = this.props;
-    return <Main actions={actions}/>;
+    const { dispatch } = this.props;
+    return <KeyboardButton text='1' click={(text) => dispatch(clickKeyboard(text))}/>;
   }
 }
 
-Keyboard.propTypes = {
-  actions: PropTypes.object.isRequired
-};
-
-function mapStateToProps(state) {
+function mapStateToProps(/*state*/) {
   const props = {};
   return props;
 }
 
-function mapDispatchToProps(dispatch) {
-  const actions = {};
-  const actionMap = { actions: bindActionCreators(actions, dispatch) };
-  return actionMap;
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Keyboard);
+export default connect(mapStateToProps)(Keyboard);

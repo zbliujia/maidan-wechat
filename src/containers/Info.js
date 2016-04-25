@@ -1,31 +1,26 @@
 import React, {
-  Component,
-  PropTypes
+  Component
 } from 'react';
-import { bindActionCreators } from 'redux';
+
 import { connect } from 'react-redux';
-import Main from '../components/Main';
+import InfoMoney from '../components/InfoMoneyComponent';
 
 class Info extends Component {
   render() {
-    const {actions} = this.props;
-    return <Main actions={actions}/>;
+    //const { dispatch } = this.props;
+    return <InfoMoney text={this.props.text}/>;
   }
 }
 
 Info.propTypes = {
-  actions: PropTypes.object.isRequired
+
 };
 
 function mapStateToProps(state) {
-  const props = {};
+  const props = {
+    text: state.Keyboard.join('')
+  };
   return props;
 }
 
-function mapDispatchToProps(dispatch) {
-  const actions = {};
-  const actionMap = { actions: bindActionCreators(actions, dispatch) };
-  return actionMap;
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Info);
+export default connect(mapStateToProps)(Info);

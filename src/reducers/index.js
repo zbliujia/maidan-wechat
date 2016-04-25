@@ -7,6 +7,11 @@
  *          you edit them, they are not updated again.
  */
 import { combineReducers } from 'redux';
+import Keyboard from './Keyboard'
 /* Populated by react-webpack-redux:reducer */
-const reducers = {};
-module.exports = combineReducers(reducers);
+
+const reducers = combineReducers({
+  Keyboard
+});
+
+module.exports = reducers;
