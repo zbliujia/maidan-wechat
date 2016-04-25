@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "maidan",
+    "style": "css",
+    "postcss": true
+  }
+}
