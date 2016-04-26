@@ -14,7 +14,7 @@ class Keyboard extends Component {
       <div>
         {
           keys.map(function(title) {
-            return <KeyboardButton text={title} click={(text) => dispatch(clickKeyboard(text))}/>;
+            return <KeyboardButton key={title} text={title} click={(text) => dispatch(clickKeyboard(text))}/>;
           })
         }
       </div>

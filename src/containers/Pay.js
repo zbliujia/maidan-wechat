@@ -4,12 +4,13 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Main from '../components/Main';
+import * as PayActionCreators from '../actions/Pay'
+import PayButton from '../components/PayButtonComponent';
 
 class Pay extends Component {
   render() {
-    const {actions} = this.props;
-    return <Main actions={actions}/>;
+    const {actions,active} = this.props;
+    return <PayButton actions={actions} active={active} />;
   }
 }
 
@@ -18,13 +19,13 @@ Pay.propTypes = {
 };
 
 function mapStateToProps(state) {
-  const props = {};
+  let value = parseFloat(state.Keyboard.join(''));
+  const props = {active:value > 0};
   return props;
 }
 
 function mapDispatchToProps(dispatch) {
-  const actions = {};
-  const actionMap = { actions: bindActionCreators(actions, dispatch) };
+  const actionMap = { actions: bindActionCreators(PayActionCreators, dispatch) };
   return actionMap;
 }
 

@@ -1,0 +1,13 @@
+
+.paybutton-component {
+  width: 100%;
+  height: 100px;
+}
+
+.paybutton-active {
+  background: green;
+}
+
+.paybutton-inactive {
+  background: gray;
+}
