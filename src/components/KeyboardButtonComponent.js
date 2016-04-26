@@ -8,7 +8,7 @@ class KeyboardButtonComponent extends Component {
 
   render() {
     return (
-      <button onClick={() => this.handleClick()}>{this.props.text}</button>
+      <button className='keyboard-button' onClick={() => this.handleClick()}>{this.props.text}</button>
     );
   }
 

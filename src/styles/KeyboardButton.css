@@ -1,3 +1,6 @@
-.keyboardbutton-component {
-  border: 1px dashed #f00;
+.keyboard-button {
+  width: 33%;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
 }
