@@ -1,7 +1,34 @@
 /* Base Application Styles */
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
   color: #fff;
   background: #222;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info-content {
+  flex: 1 0 auto;
+}
+
+.pay-content {
+  flex: 0 0 auto;
+}
+
+.keyboard-content {
+  flex: 0 0 auto;
 }
 
 .index img {
@@ -18,4 +45,16 @@ body {
   border: 1px solid #000;
   border-width: 1px 0;
   background: #666;
+}
+
+/*
+第一个会转换为2rem 代码里写750的设计稿
+第二个 第三个 默认为 data-dpr="2"
+第三个 没有任何变化
+*/
+.test {
+  width: 150px;
+  height: 64px; /*px*/
+  font-size: 28px; /*px*/
+  border: 1px solid #ddd; /*no*/
 }
