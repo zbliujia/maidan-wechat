@@ -7,7 +7,7 @@ require('styles/PayButton.css');
 class PayButtonComponent extends React.Component {
 
   render() {
-    let classes = classnames('paybutton-component', {'paybutton-active': this.props.active}, {'paybutton-inactive': !this.props.active});
+    let classes = classnames('paybutton-component', {'paybutton-active': this.props.money > 0}, {'paybutton-inactive': !(this.props.money > 0)});
     return (
       <button className={classes} onClick={() => this.handleClick()}>
         确认支付
@@ -16,11 +16,11 @@ class PayButtonComponent extends React.Component {
   }
 
   handleClick() {
-    if(this.props.active) {
-      this.props.actions.clickPay();
+    if(this.props.money > 0) {
+      this.props.actions.busy(true);
+      this.props.actions.fetchPayIfNeeded(this.props.money);
     }
   }
-
 }
 
 // Uncomment properties you need

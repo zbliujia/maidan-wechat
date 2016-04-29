@@ -1,9 +1,9 @@
 
-import { Busy } from '../actions/const'
+import { BUSY } from '../actions/const'
 
 function busy(state = false, action) {
   switch (action.type) {
-    case Busy:
+    case BUSY:
       return action.status;
     default:
       return state;

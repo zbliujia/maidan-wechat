@@ -1,8 +1,8 @@
-import {Busy} from './const';
+import {BUSY} from './const';
 
 export const busy = (status) => {
   return {
-    type: Busy,
+    type: BUSY,
     status: status
   }
 };
