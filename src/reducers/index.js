@@ -8,10 +8,12 @@
  */
 import { combineReducers } from 'redux';
 import Keyboard from './Keyboard'
+import Busy from './Busy'
 /* Populated by react-webpack-redux:reducer */
 
 const reducers = combineReducers({
-  Keyboard
+  Keyboard,
+  Busy
 });
 
 module.exports = reducers;

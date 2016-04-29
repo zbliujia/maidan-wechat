@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from './stores';
 import App from './containers/App';
 
-const store = configureStore({Keyboard:[]});
+const store = configureStore({Keyboard:[],Busy:false});
 
 render(
   <Provider store={store}>
