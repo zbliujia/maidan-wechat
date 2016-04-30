@@ -1,10 +1,7 @@
 import React, {
-  Component,
-  PropTypes
+  Component
 } from 'react';
 
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import Loading from 'react-loading';
 
 class Busy extends Component {

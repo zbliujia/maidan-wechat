@@ -9,11 +9,13 @@
 import { combineReducers } from 'redux';
 import Keyboard from './Keyboard'
 import Busy from './Busy'
+import { routerReducer } from 'react-router-redux'
 /* Populated by react-webpack-redux:reducer */
 
 const reducers = combineReducers({
   Keyboard,
-  Busy
+  Busy,
+  routing: routerReducer
 });
 
 module.exports = reducers;
